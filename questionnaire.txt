@@ -4,27 +4,38 @@ QUESTIONNAIRE!
 The following questionnaire seeks to understand your previous knowledge about some of the concepts that we will learn in class during the coming term.
 
 1. Do you know any programming languages? If you do, which ones?
+Yes, during the many courses from my major and from internships I've done, I discovered Java, Python, C, C#, Assembler, Ocaml, Max/MSP, SuperCollider.
 
 2. What is your primary computer operating system (OS)?
+Mac OS (and Linux)
 
 3. Do you own a smartphone, tablet, or mobile device? What is your favourite OS for mobile devices?
+I have an Iphone, hence using IOS.
 
 4. Do you use any social networking services? If you do, which ones? Why?
+I use Facebook, Instagram, Linkedin and Soundcloud. Facebook and instgram is mainly for friends and entertainment, while linkedin is for work and soundcloud is purely for music. 
 
 5. Expand the following acronyms and do research about their meaning. You may look them up if you don't know:
 
-    HTTP
-    REST    
-    API
+    HTTP	(Hypertest Transfer Protocol) It is a protocol used to comunicate data and transfer requests on the Internet. 
+    REST    	(Representational State Transfer) It is a Software Artichterural style used to develop tools used in the Web  
+    API		(Application Programming Interface) It is primarily an interface used to simplify the programming of softwares. 
 
 6. Do you play a musical instrument or sing? If so, how much experience do you have?
+I have played the piano for some years, but I mainly produce electronic music using VSTs as well as hardware equipments (midi devices, analogue sequencers...)
 
 7. Can you read music notation? If so, how well?
+I can but I am not very fluent. 
 
 8. How large is your personal music collection? Estimate the number of artists, albums, and songs. If instead you listen to music using streaming services, how many playlists, artists, albums, and songs do you have in your account?
+I would say that I have more than 50 playlists from many different services (Spotify, Soundcloud, Youtube). I listen to a lot of electronic music (house, techno and all their sub-genres). I don't listen to particular artists, even though some artists come up many times, so I would say that I listen to between 500 and 700 artists and that there are more than 2000 tracks in my account.
 
 9. How do you search and find new music?
+I love to find new musics. I actually have an Instagram page called Grooverie where I share music that I just discovered and that I really like. Usually, I search music in the suggested playlist in Spotify and Soundcloud, but I also like to dig in some artists and their labels. 
 
 11. Are you aware of any ways in which artists are dealing with public performances post-COVID? Do you think live performances are essential to your musical experience?
+I think that live performance is something that is essential to the artists as it is the best way for them to get a feedback on their work. Despite the fact that many artists tried to produce online shows during the lockdowns, I think that beeing in the same room as an artist that perfoms is the best way to experience his work.  
 
 12. Name two musical artists that you like. What do you find interesting about their music that makes you like them?
+I really like Sweely, who is a French house producer. I find him very interesting because he does all his work using old-school analog hardware machines and his motto is all about groove. He also uses Soundcloud a lot to share his work and he is very prolofic.
+Another artist that I really like is KAS:ST. It is a duo of techno producers and their work is also amazing. I see them as craftsmen of music: they didn't invent anything in terms of genre, style etc; but they mastered their art at a level that is amazing, and they produce almost perfect pieces !
