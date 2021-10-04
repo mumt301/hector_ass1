@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Laurent Garnier</title>
+        <link rel="stylesheet" href="artist_page.css">
+    </head>
+
+    <body>
+
+        
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'HOME')" id="defaultOpen">HOME</button>
+            <button class="tablinks" onclick="openTab(event, 'BIOGRAPHY')">BIOGRAPHY</button>
+            <button class="tablinks" onclick="openTab(event, 'DISCOGRAPHY')">DISCOGRAPHY</button>
+            <button class="tablinks" onclick="openTab(event, 'MUSIC')">MUSIC</button>
+        </div>
+
+
+
+        <div id="HOME" class="tabcontent">
+            <h3> Laurent Garnier</h3>
+            <img src="media/Laurent_Garnier_Pic.png">
+        </div>
+
+
+
+        <div id="BIOGRAPHY" class="tabcontent">
+            <h3 id="title"> BIOGRAPHY </h3>
+            <p>
+                A former staffer at the embassy in London, Frenchman Laurent Garnier began DJing in Manchester during the late '80s. By the following decade, he had become one of the best all-around DJs in the world, able to span classic deep house and Detroit techno, the harder side of acid/trance, and surprisingly jazzy tracks as well. He added production work to his schedule in the early '90s, and recorded several brilliant LPs across two additional decades that displayed a similar penchant for diversity.
+            </p>
+            <p>
+                One of the first Europeans to begin mixing American house music in Britain, Garnier was one of the prime cogs in the late-'80s Madchester scene. His DJing at Manchester's legendary Haçienda Club provided a major inspiration for the Stone Roses and Happy Mondays to begin adding house rhythms to rock music. Garnier shifted his attention back to France in the early '90s, running the Wake Up Club in Paris for three years and gradually moving into recording as well. For the FNAC label, Garnier released "French Connection" and the Bout de Souffle EP. He then formed the F Communications label with Eric Morand (a friend who had also worked for FNAC). He had amassed quite a discography by the mid-'90s, but his first LP, Shot in the Dark, wasn't launched until 1995. His second, 30, appeared in 1997, followed by the retrospective Early Works.
+            </p>
+            <p>
+                After trotting the globe with multiple DJ appearances during the late '90s, Garnier returned to the production realm in 2000 with Unreasonable Behaviour, which was followed by the 2005 set Cloud Making Machine. Retrospective: 1994-2006 combined major singles like "Crispy Bacon" and "The Man with the Red Face" with standout remixes for the likes of Alex Attias and Carl Craig. A couple years later, Garnier offered the expansive -- even by his standard -- Tales of a Kleptomaniac. Throughout the decade, he also put together a handful of varied mix albums: Excess Luggage, Life: Styles, and The Kings of Techno, the last of which was a two-disc set shared with comrade Craig.
+            </p>
+            <p>
+                The 2010s were slightly less active for Garnier only when it came to traditional studio content. DJing, broadcasting, and operating F Communications kept him occupied, as did making music for dance productions, television, and film. The year 2015 brought La Home Box, a helpful compilation that rounded up then-recent tracks issued on 12" and as digital downloads for an assortment of labels, including Hypercolour, 50 Weapons, and Still Music, as well as some exclusive tracks.
+            </p>
+            <p>
+                After 30 years devoted to music, Laurent has been made Chevalier de la Légion d´Honneur in 2017, the highest French order of merit, both military and civil.
+            </p>
+
+            <p> This biography has been taken from John Bush work, that you can find <a href="https://www.allmusic.com/artist/laurent-garnier-mn0000140786/biography?1633365259580"> here.</a>          </p>
+        </div>
+
+
+
+        <div id="DISCOGRAPHY" class="tabcontent">
+            <h3> DISCOGRAPHY. </h3>
+            <h2> Major LPs</h2>
+            <img src="media/Shot_in_the_dark.jpeg" width="400" height="400">
+            <p>Shot In the Dark (1994)</p>
+            <img src="media/30.jpg" width="400" height="400">
+            <p>30 (1997)</p>
+            <img src="media/Unreasonable_Behaviour.jpg" width="400" height="400">
+            <p>Unreasonable Behaviour (2000)</p>
+            <img src="media/Retrospective.jpg" width="400" height="400">
+            <p>Retrospective 94/06</p>
+            <img src="media/La_Home_Box.jpg" width="400" height="400">
+            <p>La Home Box (2015)</p>
+            <h2> Favourite EP:</h2>
+            <img src="media/Speicher.jpeg" width="400" height="400">
+            <p>Speicher 95 - Tribute EP (2017)</p>
+        </div>
+
+
+        
+        <div id="MUSIC" class="tabcontent">
+            <h3> MUSIC </h3>
+            
+            <iframe 
+                width="853" height="480" 
+                src="https://www.youtube.com/embed/VO_PAy3x5UU" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+            
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/8Dx5e8wvSfQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <p id="link_to_home_page"> <a href="index.html"> HOME </a> </p>
+
+        <audio id="audiofile" autoplay controls loop src="media/Laurent Garnier - 1-4 Doctor C'est Chouette.mp3" type="audio/fileextension"></audio>
+
+
+        <!-- Script inspired by w3school tutorial on html/CSS tabs.-->
+        <script>
+            function openTab(evt, pageName) {
+                var i, tabcontent, tablinks;
+
+                // Hide class="tabcontent" element
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Remove the class "active" from class="tablinks" elements
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(pageName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+            
+            document.getElementById("defaultOpen").click();
+        </script>
+
+
+    </body>
+
+</html>

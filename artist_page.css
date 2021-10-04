@@ -1,0 +1,50 @@
+/* Style of the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  
+/* Style of the tabs buttons */
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 30px;
+    transition: 0.3s;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+
+/* Style inside the tabs */
+.tabcontent {
+    text-align: center;
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    color:gray;
+}
+
+#link_to_home_page{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+#audiofile{
+    text-align: center;
+}
