@@ -93,7 +93,7 @@ function getAlbums(xhttp) {
     }
 
     document.getElementById("loading").innerHTML = "";
-    document.getElementById("artist_name").innerHTML = "Here is a list of album names and their release dates for "+artistNameForDisplay+": ";
+    document.getElementById("artist_name").innerHTML = "Here is a list of album names from "+artistNameForDisplay+", as well as their release dates:";
     document.getElementById('placeholder').innerHTML = table;
     
 }
