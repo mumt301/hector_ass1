@@ -1,0 +1,30 @@
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>MusicBrainz API</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="musicbrainz_API_call.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <h2>MusicBrainz API</h2>
+            <p> Retrieve albums and their release dates for a given artist !</p>
+            
+            <form id="artist" method="GET">
+                <label for="name">Artist name?</label>
+                <input type="text" name="artist" id="name">
+                <input type="submit" value="Get Albums!">
+            </form>
+
+            <p id="loading"></p>
+            <h4 id="artist_name"></h4>
+            <table id="placeholder"></table>
+            
+        </div>
+
+    </body>
+
+</html>
