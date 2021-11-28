@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Theremin</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <link rel="stylesheet" href="theremin.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+
+    <script src="theremin.js" type="text/JavaScript"></script>
+    <script src="theremin_auxiliary.js" type="text/JavaScript"></script>
+</head>
+
+<body>
+    <h1>An online <span id="thereminLogo">Theremin</span> instrument</h1>
+    <p>The theremin is an electronic musical instrument invented by <a
+            href="https://en.wikipedia.org/wiki/Leon_Theremin">Leon Theremin</a> in 1920s.</p>
+    <p>This demo uses <a href="https://alemangui.github.io/pizzicato/">pizzicato.js</a> to implement a "virtual"
+        Theremin on your browser.
+    </p>
+    <p>The <code>pizzicato.js</code> library (and other similar ones) use the <a
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> to play sounds on
+        the browser.</p>
+
+    <form>
+        <p>Please select the second note you would like to be played :</p>
+        <input type="radio" id="maj_third" name="semitone_choice" value="maj_third">
+        <label for="maj_third">Major Third</label><br>
+        <input type="radio" id="min_third" name="semitone_choice" value="min_third">
+        <label for="min_third">Minor Third</label><br>
+        <input type="radio" id="perf_fifth" name="semitone_choice" value="perf_fifth">
+        <label for="min_third">Perfect Fifth</label><br>
+        <input type="radio" id="octave" name="semitone_choice" value="octave">
+        <label for="octave">Perfect Octave</label><br>
+        
+        <p>Please select the oscilattors type:</p>
+        <input type="radio" id="sine" name="osc_type" value="sine">
+        <label for="sine">Sine</label><br>
+        <input type="radio" id="square" name="osc_type" value="square">
+        <label for="square">Square</label><br>  
+        <input type="radio" id="triangle" name="osc_type" value="triangle">
+        <label for="triangle">Triangle</label><br>
+        <input type="radio" id="sawtooth" name="osc_type" value="sawtooth">
+        <label for="sawtooth">Sawtooth</label><br>
+
+        <p>Please choose the minimum and maximum frequencies :</p>
+        <label for="min_freq">Minimum Frequency:</label><br>
+        <input type="text" id="min_freq" name="min_freq" value="220"><br>
+        <label for="max_freq">Last name:</label><br>
+        <input type="text" id="max_freq" name="max_freq" value="880"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="thereminZone"></div>
+
+    <p id="frequency"></p>
+    <p id="noteName"></p>
+
+    <h3 id="link_to_assignment"> <a href="assignment.html">Back to assignments.</a> </h3>
+</body>
+
+</html>
