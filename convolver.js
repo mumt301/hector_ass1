@@ -20,6 +20,7 @@ function runAfterLoadingPage(){
 
     const play_buton = document.getElementById("playBtn");
     const stop_button = document.getElementById("stopBtn");
+    const convolution_amount = document.getElementById("rangeInput");
 
     play_buton.addEventListener("click", function () {
         voice.addEffect(convolver);
@@ -28,6 +29,11 @@ function runAfterLoadingPage(){
     stop_button.addEventListener("click", function () {
         voice.removeEffect(convolver);
     });
+
+    convolution_amount.addEventListener("change", function() {
+        convolver.mix = (convolution_amount.value)/100;
+        console.log("Value of slider: ", convolution_amount.value);
+    }, false);
 
 }
 
