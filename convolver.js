@@ -5,7 +5,7 @@ function runAfterLoadingPage(){
 
     // We create a convolver
     var convolver = new Pizzicato.Effects.Convolver({
-        impulse: './media/final_proj/quiet_street_IR.wav',
+        impulse: './media/final_proj/small_church_IR.wav',
         mix: 0.5
     }, function() {
         console.log('Convolver ready to be used.');
