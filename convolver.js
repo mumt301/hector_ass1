@@ -58,7 +58,7 @@ function runAfterLoadingPage(){
     convolution_amount2.addEventListener("change", function() {
         convolver2.mix = (convolution_amount2.value)/100;
         // console.log("Value of slider: ", convolution_amount2.value);
-        document.getElementById("amount2").innerHTML =  "Intensity : " +convolution2_amount.value+"%";
+        document.getElementById("amount2").innerHTML =  "Intensity : " +convolution_amount2.value+"%";
     }, false);
 
 }
