@@ -10,19 +10,23 @@ function runAfterLoadingPage(){
     }, function() {
         console.log('Convolver ready to be used.');
     });
-
-    // var pingPongDelay = new Pizzicato.Effects.PingPongDelay({
-    //     feedback: 0.3,
-    //     time: 0.2,
-    //     mix: 0.68
-    // });
     
     // We create a sound, that corresponds to the input microphone
     var voice = new Pizzicato.Sound({
         source: 'input',
     }, function() {
+        voice.play()
+    });
+
+    const play_buton = document.getElementById("playBtn");
+    const stop_button = document.getElementById("stopBtn");
+
+    play_buton.addEventListener("click", function () {
         voice.addEffect(convolver);
-        voice.play();
+    });
+
+    stop_button.addEventListener("click", function () {
+        voice.removeEffect(convolver);
     });
 
 }
