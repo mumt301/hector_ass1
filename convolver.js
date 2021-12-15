@@ -13,7 +13,7 @@ function runAfterLoadingPage(){
     });
 
     var convolver2 = new Pizzicato.Effects.Convolver({
-        impulse: './media/final_proj/St_Andrews_Sydney_IR.wav',
+        impulse: './media/final_proj/cave_bulgaria.wav',
         mix: 0.5
     }, function() {
         console.log('Convolver 2 ready to be used.');
