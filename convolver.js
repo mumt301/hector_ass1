@@ -6,8 +6,13 @@ function runAfterLoadingPage(){
     var wavesurfer = WaveSurfer.create({
         container     : '#waveform',
         waveColor     : 'purple',
+        backgroundColor : 'violet',
+        audioRate : 100,
         interact      : false,
         cursorWidth   : 0,
+        height        : 500,
+        barHeight     : 2,
+        barWidth      : 1,
         plugins : [
             WaveSurfer.microphone.create()
         ]
