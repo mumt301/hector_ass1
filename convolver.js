@@ -1,8 +1,28 @@
 // https://alemangui.github.io/pizzicato/#sound-from-input
 // https://github.com/cwilso/volume-meter/
 
-
 function runAfterLoadingPage(){
+
+    var wavesurfer = WaveSurfer.create({
+        container     : '#waveform',
+        waveColor     : 'purple',
+        interact      : false,
+        cursorWidth   : 0,
+        plugins : [
+            WaveSurfer.microphone.create()
+        ]
+    });
+    
+    wavesurfer.microphone.on('deviceReady', function(stream) {
+        console.log('Device ready!', stream);
+    });
+    wavesurfer.microphone.on('deviceError', function(code) {
+        console.warn('Device error: ' + code);
+    });
+
+    // start the microphone
+    wavesurfer.microphone.start();
+
 
     // We create a convolver
     var convolver = new Pizzicato.Effects.Convolver({

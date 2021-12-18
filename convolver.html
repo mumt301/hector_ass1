@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
         <link rel="stylesheet" href="convolver.css">
 
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <script src="https://unpkg.com/wavesurfer.js/dist/plugin/wavesurfer.microphone.min.js"></script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.4/Pizzicato.js"></script>
         <script src="convolver.js" type="text/JavaScript"></script>
 
@@ -17,11 +20,12 @@
         <!-- <p> To write: some background info on convolution and impulse responses </p>
         <p> To write: explain how the tool works. Want to select between many impulse response / Record impulse response / try ambisonic. </p>
          -->
-        <br>
+        
 
         <p><b>Please use headphones for an optimal experience. You are now only hearing your voice.</b></p>
         
         <br>
+
 
         <p> Example of an IR in a small church. Press play to hear yourself in it.</p>
         <button id="playBtn"> Play </button>
@@ -40,6 +44,10 @@
         <p>You can adjust the intensity of the effect (0 - 100): </p>
         <p id="amount2"></p>
         <input id="rangeInput2" type="range" min="0" max="100" value="50">
+
+        <br>
+
+        <div id="waveform"></div>
 
     </body>
 
