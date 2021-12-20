@@ -1,0 +1,51 @@
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #ffffff; /* Just to visualize the extent */
+    color: white;
+  }
+  
+.sidepanel {
+    height: 700px;              /* Specify a height */
+    width: 500px;               /* 0 width - change this with JavaScript */
+    position: absolute;            /* Stay in place */
+    z-index: 1;                 /* Stay on top */
+    top: 1%;
+    left: 1%;
+    background-color: rgb(19, 19, 19);       /* Black*/
+    overflow-x: hidden;             /* Disable horizontal scroll */
+    padding-top: 5px;              /* Place content 60px from the top */
+    padding-left: 10px;
+    transition: 0.5s;               /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+    position: relative;
+    font-size: 20px;
+    top: 2%;
+    left: 1%;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    
+}
+
+h1, h3 {
+    color: rgb(255, 255, 255);
+}

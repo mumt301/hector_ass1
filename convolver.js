@@ -5,9 +5,9 @@ function runAfterLoadingPage(){
 
     var wavesurfer = WaveSurfer.create({
         container     : '#waveform',
-        waveColor     : 'purple',
-        backgroundColor : 'violet',
-        audioRate : 100,
+        waveColor     : 'black',
+        //backgroundColor : 'violet',
+        audioRate     : 100,
         interact      : false,
         cursorWidth   : 0,
         height        : 500,
@@ -27,7 +27,6 @@ function runAfterLoadingPage(){
 
     // start the microphone
     wavesurfer.microphone.start();
-
 
     // We create a convolver
     var convolver = new Pizzicato.Effects.Convolver({
@@ -88,5 +87,20 @@ function runAfterLoadingPage(){
     }, false);
 
 }
+
+/* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+    // document.getElementById("mySidepanel").style.width = "500px";
+    document.getElementById("mySidepanel").style.display = "block";
+    document.getElementById("openbtn").style.display = "none";
+}
+  
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+    // document.getElementById("mySidepanel").style.width = "0";
+    document.getElementById("mySidepanel").style.display = "none";
+    document.getElementById("openbtn").style.display = "block";
+}
+
 
 window.onload = runAfterLoadingPage;
