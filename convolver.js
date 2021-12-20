@@ -52,22 +52,20 @@ function runAfterLoadingPage(){
 
     // Setting up the backgroud noises
     var church_background = new Pizzicato.Sound({
-        source: 'input',
+        source: 'file',
         options: { 
-            path: './media/final_proj/church_background.wav', 
-            volume: 0.5,
-            loop: true 
+            path : './media/final_proj/church_background.wav', 
+            loop : true 
         }
     }, function() {
         console.log('Church background sound ready to be used.');
     });
 
     var cave_background = new Pizzicato.Sound({
-        source: 'input',
+        source: 'file',
         options: { 
-            path: './media/final_proj/cave_background.wav', 
-            volume: 0.5,
-            loop: true 
+            path : './media/final_proj/cave_background.wav', 
+            loop : true 
         }
     }, function() {
         console.log('Cave background sound ready to be used.');
