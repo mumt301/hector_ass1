@@ -1,5 +1,3 @@
-// https://alemangui.github.io/pizzicato/#sound-from-input
-// https://github.com/cwilso/volume-meter/
 
 function runAfterLoadingPage(){
 
@@ -28,6 +26,7 @@ function runAfterLoadingPage(){
 
     wavesurfer.microphone.start();
 
+
     // Setting up the convolvers
     var convolver = new Pizzicato.Effects.Convolver({
         impulse: './media/final_proj/small_church_IR.wav',
@@ -43,12 +42,14 @@ function runAfterLoadingPage(){
         console.log('Convolver 2 ready to be used.');
     });
     
+
     // Setting up the source to be the input stream from microphone
     var voice = new Pizzicato.Sound({
         source: 'input',
     }, function() {
         voice.play()
     });
+
 
     // Setting up the backgroud noises
     var church_background = new Pizzicato.Sound({
@@ -73,6 +74,8 @@ function runAfterLoadingPage(){
         console.log('Cave background sound ready to be used.');
     });
 
+
+    // Setting up event listener for the first IR
     const play_buton = document.getElementById("playBtn");
     const stop_button = document.getElementById("stopBtn");
     const play_backgr = document.getElementById("playBackgrBtn")
@@ -95,17 +98,13 @@ function runAfterLoadingPage(){
         church_background.stop();
     });
 
-    document.addEventListener('keypress', function() {
-        wavesurfer.setWaveColor(getRandomColor());
-        wavesurfer.params.barWidth = getRandomInt(50);
-    });
-
     convolution_amount.addEventListener("change", function() {
         convolver.mix = (convolution_amount.value)/100;
         document.getElementById("amount").innerHTML = "Intensity : " +convolution_amount.value+"%";
     }, false);
 
 
+    // Setting up the event listeners on the second convolver
     const play_buton2 = document.getElementById("playBtn2");
     const stop_button2 = document.getElementById("stopBtn2");
     const convolution_amount2 = document.getElementById("rangeInput2");
@@ -134,8 +133,15 @@ function runAfterLoadingPage(){
     }, false);
 
 
+    // Setting up a key press listener to get a change in color when pressed. 
+    document.addEventListener('keypress', function() {
+        wavesurfer.setWaveColor(getRandomColor());
+        wavesurfer.params.barWidth = getRandomInt(50);
+    });
+
 }
 
+// Two helper methods to get random colors and random integers 
 function getRandomColor() {
     var r = getRandomInt(255);
     var g = getRandomInt(255);
@@ -147,19 +153,16 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
 
-/* Set the width of the sidebar to 250px (show it) */
+// A method to open the settings window
 function openNav() {
-    // document.getElementById("mySidepanel").style.width = "500px";
     document.getElementById("mySidepanel").style.display = "block";
     document.getElementById("openbtn").style.display = "none";
 }
   
-/* Set the width of the sidebar to 0 (hide it) */
+// A method to close the settings window
 function closeNav() {
-    // document.getElementById("mySidepanel").style.width = "0";
     document.getElementById("mySidepanel").style.display = "none";
     document.getElementById("openbtn").style.display = "block";
 }
-
 
 window.onload = runAfterLoadingPage;
