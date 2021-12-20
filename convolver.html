@@ -25,40 +25,37 @@
                 
                 <h1>An online convolver</h1>
                 <h3>Hear how your voice would sound in different locations.</h3>
-                <p> To write: some background info on convolution and impulse responses </p>
-                <p> To write: explain how the tool works. Want to select between many impulse response / Record impulse response / try ambisonic. </p>
-                
-
+                <!-- <p> To write: some background info on convolution and impulse responses </p>
+                <p> To write: explain how the tool works. Want to select between many impulse response / Record impulse response / try ambisonic. </p> -->
                 <p><b>Please use headphones for an optimal experience.</b></p>
                 
+                <div>
+                    <p> Impulse Response recorded in a church.</p>
+                    <button id="playBtn"> Play </button>
+                    <button id="stopBtn"> Stop </button>
 
-                <p> Impulse Response recorded in a church.</p>
-                <button id="playBtn"> Play </button>
-                <button id="stopBtn"> Stop </button>
+                    <p>Adjust the intensity of the effect (0 - 100): </p>
+                    <p id="amount"></p>
+                    <input id="rangeInput" type="range" min="0" max="100" value="50">
 
-                <p>Adjust the intensity of the effect (0 - 100): </p>
-                <p id="amount"></p>
-                <input id="rangeInput" type="range" min="0" max="100" value="50">
-
-                <p>Add background noise: </p>
-                <button id="playBackgrBtn"> Play </button>
-                <button id="stopBackgrBtn"> Stop </button>
-                
+                    <p>Add background noise: </p>
+                    <button id="playBackgrBtn"> ON </button>
+                    <button id="stopBackgrBtn"> OFF </button>
+                </div>
                 <br>
-
-                <p> Impulse response recorded in a cave in Bulgaria. : </p>
-                <button id="playBtn2"> Play </button>
-                <button id="stopBtn2"> Stop </button>
-                
-                <p>You can adjust the intensity of the effect (0 - 100): </p>
-                <p id="amount2"></p>
-                <input id="rangeInput2" type="range" min="0" max="100" value="50">
-
-                <p>Add background noise: </p>
-                <button id="playBackgrBtn2"> Play </button>
-                <button id="stopBackgrBtn2"> Stop </button>
+                <div>
+                    <p> Impulse response recorded in a cave in Bulgaria. : </p>
+                    <button id="playBtn2"> Play </button>
+                    <button id="stopBtn2"> Stop </button>
                     
+                    <p>You can adjust the intensity of the effect (0 - 100): </p>
+                    <p id="amount2"></p>
+                    <input id="rangeInput2" type="range" min="0" max="100" value="50">
 
+                    <p>Add background noise: </p>
+                    <button id="playBackgrBtn2"> ON </button>
+                    <button id="stopBackgrBtn2"> OFF </button>
+                </div>
 
             </div>  
 
