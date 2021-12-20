@@ -12,3 +12,5 @@ Finally, he can toggle the settings window and see a waveform representing what 
 The implementation makes use of Pizzicato.js as well as Wavesurfer.js, two libraries that are respectively used for its convolver and for its waveform vizualizer.  
 
 The files that are related to the project are called "convolver.html", "convolver.css" and "convolver.js"
+
+Link to the project: https://mumt301.github.io/hteyssier/convolver.html
