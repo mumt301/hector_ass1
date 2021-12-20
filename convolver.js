@@ -3,10 +3,10 @@
 
 function runAfterLoadingPage(){
 
+    // Setting up Wavesurfer to display what is being captated by mic
     var wavesurfer = WaveSurfer.create({
         container     : '#waveform',
         waveColor     : 'black',
-        //backgroundColor : 'violet',
         audioRate     : 100,
         interact      : false,
         cursorWidth   : 0,
@@ -26,10 +26,9 @@ function runAfterLoadingPage(){
         console.warn('Device error: ' + code);
     });
 
-    // start the microphone
     wavesurfer.microphone.start();
 
-    // We create a convolver
+    // Setting up the convolvers
     var convolver = new Pizzicato.Effects.Convolver({
         impulse: './media/final_proj/small_church_IR.wav',
         mix: 0.5
@@ -44,15 +43,26 @@ function runAfterLoadingPage(){
         console.log('Convolver 2 ready to be used.');
     });
     
-    // We create a sound, that corresponds to the input microphone
+    // Setting up the source to be the input stream from microphone
     var voice = new Pizzicato.Sound({
         source: 'input',
     }, function() {
         voice.play()
     });
 
+    // Setting up the backgroud noises
+    var church_background = new Pizzicato.Sound('./media/final_proj/church_background.wav', loop=true, function() {
+        console.log('Church background sound ready to be used.');
+    });
+
+    var cave_background = new Pizzicato.Sound('./media/final_proj/cave_background.wav', loop=true, function() {
+        console.log('Cave background sound ready to be used.');
+    });
+
     const play_buton = document.getElementById("playBtn");
     const stop_button = document.getElementById("stopBtn");
+    const play_backgr = document.getElementById("playBackgrBtn")
+    const stop_backgr = document.getElementById("stopBackgrBtn")
     const convolution_amount = document.getElementById("rangeInput");
 
     play_buton.addEventListener("click", function () {
@@ -61,6 +71,14 @@ function runAfterLoadingPage(){
 
     stop_button.addEventListener("click", function () {
         voice.removeEffect(convolver);
+    });
+
+    play_backgr.addEventListener("click", function () {
+        church_background.play();
+    });
+
+    stop_backgr.addEventListener("click", function () {
+        church_background.stop();
     });
 
     convolution_amount.addEventListener("change", function() {
@@ -72,6 +90,8 @@ function runAfterLoadingPage(){
     const play_buton2 = document.getElementById("playBtn2");
     const stop_button2 = document.getElementById("stopBtn2");
     const convolution_amount2 = document.getElementById("rangeInput2");
+    const play_backgr2 = document.getElementById("playBackgrBtn2")
+    const stop_backgr2 = document.getElementById("stopBackgrBtn2")
 
     play_buton2.addEventListener("click", function () {
         voice.addEffect(convolver2);
@@ -81,11 +101,19 @@ function runAfterLoadingPage(){
         voice.removeEffect(convolver2);
     });
 
+    play_backgr2.addEventListener("click", function () {
+        cave_background.play();
+    });
+
+    stop_backgr2.addEventListener("click", function () {
+        cave_background.stop();
+    });
+
     convolution_amount2.addEventListener("change", function() {
         convolver2.mix = (convolution_amount2.value)/100;
-        // console.log("Value of slider: ", convolution_amount2.value);
         document.getElementById("amount2").innerHTML =  "Intensity : " +convolution_amount2.value+"%";
     }, false);
+
 
 }
 
