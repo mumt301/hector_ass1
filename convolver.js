@@ -136,7 +136,7 @@ function runAfterLoadingPage(){
     // Setting up a key press listener to get a change in color when pressed. 
     document.addEventListener('keypress', function() {
         wavesurfer.setWaveColor(getRandomColor());
-        wavesurfer.params.barWidth = getRandomInt(50);
+        wavesurfer.params.barWidth = getRandomInt(30);
     });
 
 }
