@@ -93,7 +93,11 @@ function runAfterLoadingPage(){
 
     stop_backgr.addEventListener("click", function () {
         church_background.stop();
-        console.log(wavesurfer.getVolume());
+    });
+
+    document.addEventListener('keypress', function() {
+        wavesurfer.setWaveColor(getRandomColor());
+        wavesurfer.params.barWidth = getRandomInt(50);
     });
 
     convolution_amount.addEventListener("change", function() {
@@ -131,6 +135,17 @@ function runAfterLoadingPage(){
 
 
 }
+
+function getRandomColor() {
+    var r = getRandomInt(255);
+    var g = getRandomInt(255);
+    var b = getRandomInt(255);
+    return "rgba("+r+","+g+","+b+",0.8)";
+}
+
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
 
 /* Set the width of the sidebar to 250px (show it) */
 function openNav() {

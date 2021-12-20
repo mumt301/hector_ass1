@@ -27,6 +27,7 @@
     background-color: rgb(19, 19, 19);       /* Black*/
     overflow-x: hidden;             /* Disable horizontal scroll */
     padding-top: 5px;              /* Place content 60px from the top */
+    padding-bottom: 10px; 
     padding-left: 10px;
     padding-right: 10px;
     transition: 0.5s;               /* 0.5 second transition effect to slide in the sidepanel */
