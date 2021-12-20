@@ -7,13 +7,16 @@
     overflow: auto;
     background: #ffffff; /* Just to visualize the extent */
     color: white;
+    z-index:1;
   }
+
+
   
 .sidepanel {
     height: 700px;              /* Specify a height */
     width: 500px;               /* 0 width - change this with JavaScript */
     position: absolute;            /* Stay in place */
-    z-index: 1;                 /* Stay on top */
+    z-index: 2;                 /* Stay on top */
     top: 1%;
     left: 1%;
     background-color: rgb(19, 19, 19);       /* Black*/

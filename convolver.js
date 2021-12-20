@@ -10,7 +10,7 @@ function runAfterLoadingPage(){
         audioRate     : 100,
         interact      : false,
         cursorWidth   : 0,
-        height        : 500,
+        height        : 700,
         barHeight     : 2,
         barWidth      : 1,
         plugins : [
@@ -21,6 +21,7 @@ function runAfterLoadingPage(){
     wavesurfer.microphone.on('deviceReady', function(stream) {
         console.log('Device ready!', stream);
     });
+
     wavesurfer.microphone.on('deviceError', function(code) {
         console.warn('Device error: ' + code);
     });
