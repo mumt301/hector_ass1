@@ -12,6 +12,8 @@
 
 .IR {
     border: 1px solid rgb(150, 147, 147); 
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
   
@@ -26,6 +28,7 @@
     overflow-x: hidden;             /* Disable horizontal scroll */
     padding-top: 5px;              /* Place content 60px from the top */
     padding-left: 10px;
+    padding-right: 10px;
     transition: 0.5s;               /* 0.5 second transition effect to slide in the sidepanel */
 }
 

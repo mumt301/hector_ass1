@@ -93,6 +93,7 @@ function runAfterLoadingPage(){
 
     stop_backgr.addEventListener("click", function () {
         church_background.stop();
+        console.log(wavesurfer.getVolume());
     });
 
     convolution_amount.addEventListener("change", function() {
