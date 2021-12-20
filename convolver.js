@@ -55,6 +55,7 @@ function runAfterLoadingPage(){
         source: 'file',
         options: { 
             path : './media/final_proj/church_background.wav', 
+            volume: 0.5,
             loop : true 
         }
     }, function() {
@@ -65,6 +66,7 @@ function runAfterLoadingPage(){
         source: 'file',
         options: { 
             path : './media/final_proj/cave_background.wav', 
+            volume: 0.5,
             loop : true 
         }
     }, function() {
